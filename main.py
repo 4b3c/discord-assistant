@@ -32,8 +32,8 @@ class Buttons(discord.ui.View):
 		super().__init__(timeout=timeout)
 
 	@discord.ui.button(label="Button", style=discord.ButtonStyle.gray)
-	async def gray_button(self, button:discord.ui.Button, interaction:discord.Interaction):
-		await interaction.response.send('You clicked the button!')
+	async def gray_button(self, interaction, button):
+		await interaction.response.send_message("You clicked the button!")
 
 
 
